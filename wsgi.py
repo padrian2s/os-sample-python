@@ -3,7 +3,7 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    return "Running model srv v1.0\n entry points /init /run /cleanup\n"
+    return "Running model srv v1.0 - new feature branch\n entry points /init /run /cleanup\n"
 
 @application.route("/init")
 def init():
