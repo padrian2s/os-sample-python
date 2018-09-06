@@ -3,7 +3,11 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    return "Running model srv v1.0\n entry points /init /run /cleanup\n"
+    try:
+     fr = open('/data/dataset.txt', 'r').read()
+    except:
+     fr = "no storage attached"
+    return "Running model srv v1.0\n entry points \n /init \n /run \n /cleanup \n\n\n file content: \n %s" % (fr)
 
 @application.route("/init")
 def init():
