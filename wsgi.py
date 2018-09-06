@@ -1,4 +1,5 @@
 from flask import Flask
+import random
 application = Flask(__name__)
 
 @application.route("/")
@@ -11,6 +12,8 @@ def hello():
 
 @application.route("/init")
 def init():
+    with open('/data/dataset.txt','a+') as f:
+        f.write(str(random.randint(0,9)))
     return "Initialize the model"
     
 @application.route("/run")
