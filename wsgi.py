@@ -8,7 +8,7 @@ def hello():
      fr = open('/data/dataset.txt', 'r').read()
     except:
      fr = "no storage attached"
-    return "Running model srv v1.0.1\n entry points \n /init \n /run \n /cleanup \n\n\n file content: \n %s" % (fr)
+    return "Running model srv v1.0.2\n entry points \n /init \n /run \n /cleanup \n\n\n file content: \n %s" % (fr)
 
 @application.route("/init")
 def init():
